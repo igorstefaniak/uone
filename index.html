@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="Igor Stefaniak">
+        <meta name="copyright" content="Igor Stefaniak">
+        <meta name="theme-color" content="#">
+        <title>Widżet</title>
+        <link id="favicon" rel="shortcut icon" href="./" type="image/png">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./styles/main-style.css">
+    </head>
+    <body>
+        <div class="navbar">
+
+            <div class="left-navbar">
+                <a href="/" target="_self"><img src="./images/icon.svg" alt="Logo serwisu"></a>
+            </div>
+
+            <div class="hello-text">Witaj ponownie👋</div>
+
+            <div class="center-navbar">
+                <div class="finder">
+                    <input class="input" type="search" placeholder="Przeszukaj.." required>
+                    <button type="submit">
+                        <i id="search" class="bx bx-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="items-navbar">
+                <a href="javascript:bookmarks()">
+                    <div class="button">
+                        <i id="icon1" class="bx bx-bookmark-alt"></i>
+                    </div>
+                </a>
+                <a href="javascript:love()">
+                    <div class="button">
+                        <i id="icon2" class="bx bx-heart"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right-navbar">
+                <a class="user-button" href="./">
+                    <div class="avatar">
+                        <img src="./images/igor.jpg">
+                        <div class="is-active"></div>
+                        <div class="nickname">Igor</div>
+                    </div>
+                </a>
+            </div>
+<script src="./scripts/icons.js"></script>
+        </div>
+    </body>
+</html>
