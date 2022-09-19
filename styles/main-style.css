@@ -180,3 +180,72 @@ img{
   visibility: hidden;
   opacity: 0;
 }
+.user-menu ul li{
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: center;
+}
+
+.user-menu ul li a{
+  display: flex;
+  justify-content: center;
+  width: -webkit-fill-available;
+  transition: all .20s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.user-menu ul li a:hover{
+  transform: scale(1.1);
+}
+
+.user-menu ul li a i{
+  margin-right: 10px;
+}
+
+.user-menu{
+  position:fixed;
+    border-radius: 10px;
+    width: 140px;
+    background: rgba(18, 21, 30,.40);
+    z-index: 9090999;
+    top: 95px;
+    transition: 0.45s ease-out;
+}
+
+.user-menu ul li {
+  margin: 0.5rem;
+  font-size: 15px;
+}
+
+.user-menu ul{
+  margin: 8px 2px 2px 2px;
+}
+
+#user-menu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.user-button:hover + #user-menu{
+  visibility: visible;
+  opacity: 1;
+}
+
+#user-button:not(:hover) + #user-menu{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.user-menu ul {list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    }
+    
+    .avatar img {
+        border-radius: 70px;
+        border: #ffffff;
+        border-style: solid;
+        border-width: 3px;
+    }
