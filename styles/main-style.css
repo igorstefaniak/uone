@@ -52,10 +52,8 @@ img{
   display: block;
   height: 80px;
 }
-.hello-text{
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  color: #262e3f;
+#hello-text{
+  font-size: 12px;
 }
 /* --- */
 .center-navbar {

@@ -12,7 +12,8 @@
         <title>Widżet</title>
         <link id="favicon" rel="shortcut icon" href="./" type="image/png">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="./styles/main-style.css">
@@ -23,9 +24,6 @@
             <div class="left-navbar">
                 <a href="/" target="_self"><img src="./images/icon.svg" alt="Logo serwisu"></a>
             </div>
-
-            <div class="hello-text">Witaj ponownie👋</div>
-
             <div class="center-navbar">
                 <div class="finder">
                     <input class="input" type="search" placeholder="Przeszukaj.." required>
@@ -53,7 +51,10 @@
                     <div class="avatar">
                         <img src="./images/igor.jpg">
                         <div class="is-active"></div>
-                        <div class="nickname">Igor</div>
+                        <div class="welcome">
+                            <div id="hello-text">Witaj ponownie👋</div>
+                            <div class="nickname">Igor Stefaniak</div>
+                        </div>
                     </div>
                 </a>
                 <div class="user-menu _vanish" id="user-menu">
@@ -75,6 +76,8 @@
                 </div>
             </div>
 <script src="./scripts/icons.js"></script>
+<script src="./scripts/tags.js"></script>
+<script src="./scripts/welcome.js"></script>
         </div>
     </body>
 </html>
