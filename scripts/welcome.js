@@ -1,4 +1,21 @@
-const welcometext = ["Cześć👋", "Witaj ponownie👋"];
+const welcometext = ["Cześć👋", "Witaj ponownie👋", "Co słychać?🎯"];
+const welcometextevening = ["Dobry wieczór🌙", "Dobrej nocy🌃"];
+const welcometextmorning = ["Dzień dobry🌄"];
 let hellotext = document.getElementById('hello-text');
-hellotext.append()
-setAttribute('href',`./images/icons/favicon${Math.floor(10*Math.random())+1}.png`);
+
+const d = new Date();
+const hour = d.getHours()
+
+console.log(d.getHours)
+if(hour >= 5 && hour <= 10 ){
+
+    var randomNumber = Math.floor(Math.random()*welcometextmorning.length);
+
+hellotext.innerHTML = welcometextmorning[randomNumber];
+}
+else if(hour >= 18 && hour <= 23 ){
+
+    var randomNumber = Math.floor(Math.random()*welcometextevening.length);
+
+hellotext.innerHTML = welcometextevening[randomNumber];
+}
