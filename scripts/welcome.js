@@ -4,18 +4,18 @@ const welcometextmorning = ["Dzień dobry!🌄", "Miłego dnia☀️"];
 let hellotext = document.getElementById('hello-text');
 
 const d = new Date();
-const hour = d.getHours()
 
-console.log(d.getHours)
-if(hour >= 5 && hour <= 10 ){
-
-    var randomNumber = Math.floor(Math.random()*welcometextmorning.length);
-
-hellotext.innerHTML = welcometextmorning[randomNumber];
-}
-else if(hour >= 18 && hour <= 23 ){
-
-    var randomNumber = Math.floor(Math.random()*welcometextevening.length);
-
-hellotext.innerHTML = welcometextevening[randomNumber];
+switch(true){
+    case d.getHours() >= 5 && d.getHours() <= 10:
+        var randomNumber = Math.floor(Math.random()*welcometextmorning.length);
+        hellotext.innerHTML = welcometextmorning[randomNumber];
+        break;
+    case d.getHours() >= 18 && d.getHours() <= 23:
+        var randomNumber = Math.floor(Math.random()*welcometextevening.length);
+        hellotext.innerHTML = welcometextevening[randomNumber];
+        break;
+    default:
+        var randomNumber = Math.floor(Math.random()*welcometext.length);
+        hellotext.innerHTML = welcometext[randomNumber];
+        break;
 }

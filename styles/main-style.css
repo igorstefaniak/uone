@@ -116,7 +116,6 @@ img{
 .items-navbar{
   align-items: center;
   display: flex;
-  margin-left: 15px;
 }
 .navbar .button {
   width: 60px;
