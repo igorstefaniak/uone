@@ -65,7 +65,7 @@ img{
   max-width: 754px;
 }
 .finder input[type=search] {
-  margin: 16px;
+  margin: 8px;
   font-size: 16px;
   border: none;
   border-radius: 24px;
@@ -76,9 +76,6 @@ img{
   text-indent: 10px;
   height: 32px;
   transition: all .20s cubic-bezier(0.4, 0, 1, 1);
-}
-.finder input[type=search]:hover{
-  transform: scale(1.03);
 }
 .finder{
   justify-content: space-evenly;
@@ -227,3 +224,40 @@ img{
   flex-wrap: wrap;
   padding: 0px;
 }
+/* --- */
+.top-tags {
+  display: flex;
+  position: fixed;
+  top: 95px;
+  height: 60px;
+  right: 150px;
+  left: 150px;
+  align-items: center;
+  justify-content: center;
+  transition: all .20s cubic-bezier(0.4, 0, 1, 1);
+}
+.top-tags .tags {
+  display:table;
+  background: rgba(0, 0, 0, 0.418);
+  border-radius: 30px 30px 30px 30px;
+  padding: 10px 25px 10px 25px;
+  margin: 5px 10px 5px 10px;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,.5);
+  font-size: 14px;
+  transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.tags:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1020px), screen and (orientation: portrait) { 
+    .nickname, #hello-text, .items-navbar{display: none;}
+    .navbar{height: 48px; left:10px; right:10px;}
+    .center-navbar{ width: -webkit-fill-available;}
+    .finder input[type=text] {margin: 8px; font-size: 12px; width: calc(900% - 20px);}
+    .top-tags .tags{font-size: 12px; height: 30px; padding: 10px 15px 10px 15px;}
+    .top-tags{flex-wrap: wrap; left: 25px; right: 25px;}
+    .user-menu{right: 10px; width: 180px;}
+    .user-menu ul li {font-size: 16px; margin: 10px;}
+    .finder button {margin-right: 8px;}
+ }
