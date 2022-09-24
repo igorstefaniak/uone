@@ -246,7 +246,7 @@ img{
   font-size: 14px;
   transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.tags:hover {
+.top-tags .tags:hover {
     transform: scale(1.2);
     font-weight: 800;
 }
