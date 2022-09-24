@@ -1,7 +1,7 @@
 window.addEventListener('offline', (e) => {
-    console.log("The network connection has been lost.");
+    console.log("🔴 Rozłączono z internetem");
 });
 
-window.onoffline = (e) => {
-  console.log("The network connection has been lost.");
-};
+window.addEventListener('online', (e) => {
+    console.log("🟢 Połączenie przywrócone");
+});
