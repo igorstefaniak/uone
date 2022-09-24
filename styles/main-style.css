@@ -27,7 +27,7 @@ img{
 
 /* -------------- */
 
-.navbar {
+.top-navbar {
   position: fixed;
   top: 25px;
   height: 60px;
@@ -114,7 +114,7 @@ img{
   align-items: center;
   display: flex;
 }
-.navbar .button {
+.top-navbar .button {
   width: 60px;
   height: 60px;
   display: flex;
@@ -125,14 +125,14 @@ img{
   transition: all .20s cubic-bezier(0.4, 0, 1, 1);
   text-decoration: none;
 }
-.navbar .button:hover:not(.isactive .user-menu) {
+.top-navbar .button:hover:not(.isactive .user-menu) {
   transform: scale(1.2);
 }
-.navbar .button.active {
+.top-navbar .button.active {
   color: rgb(53, 53, 53);
   background-color: rgb(255, 255, 255, 0.18);
 }
-.navbar .button i {
+.top-navbar .button i {
   font-size: 24px;
   pointer-events: visible;
   cursor: pointer;
@@ -248,11 +248,12 @@ img{
 }
 .tags:hover {
     transform: scale(1.2);
+    font-weight: 800;
 }
 
 @media (max-width: 1020px), screen and (orientation: portrait) { 
     .nickname, #hello-text, .items-navbar{display: none;}
-    .navbar{height: 48px; left:10px; right:10px;}
+    .top-navbar{height: 48px; left:10px; right:10px;}
     .center-navbar{ width: -webkit-fill-available;}
     .finder input[type=text] {margin: 8px; font-size: 12px; width: calc(900% - 20px);}
     .top-tags .tags{font-size: 12px; height: 30px; padding: 10px 15px 10px 15px;}
@@ -260,4 +261,5 @@ img{
     .user-menu{right: 10px; width: 180px;}
     .user-menu ul li {font-size: 16px; margin: 10px;}
     .finder button {margin-right: 8px;}
+    .left-navbar img {display: block;height: 40px;}
  }

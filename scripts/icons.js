@@ -1,17 +1,12 @@
-$('#icon1').mouseenter(
+$('#bookmarks').mouseenter(
     function(){ $(this).removeClass('bx-bookmark-alt'); $(this).addClass('bxs-bookmark-alt')},)
-$('#icon1').mouseleave(
+$('#bookmarks').mouseleave(
     function(){ $(this).removeClass('bxs-bookmark-alt'); $(this).addClass('bx-bookmark-alt')},)
 
-$('#icon2').mouseenter(
-    function(){ $(this).removeClass('bx-heart'); $(this).addClass('bxs-heart'); document.getElementById("icon2").style.color = "#e91e43";},)
-$('#icon2').mouseleave(
-    function(){ $(this).removeClass('bxs-heart'); $(this).addClass('bx-heart'); document.getElementById("icon2").style.color = "#ffffff";},)
-
-$('#icon3').mouseenter(
-    function(){ $(this).removeClass('bx-user'); $(this).addClass('bxs-user')},)
-$('#icon3').mouseleave(
-    function(){ $(this).removeClass('bxs-user'); $(this).addClass('bx-user')},)
+$('#love').mouseenter(
+    function(){ $(this).removeClass('bx-heart'); $(this).addClass('bxs-heart'); $(this).attr('style', 'color:#e91e43');},)
+$('#love').mouseleave(
+    function(){ $(this).removeClass('bxs-heart'); $(this).addClass('bx-heart'); $(this).attr('style', 'color:#ffffff');},)
 
 $('#search').mouseenter(
     function(){ $(this).removeClass('bx-search'); $(this).addClass('bxs-search')},)
