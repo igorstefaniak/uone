@@ -1,7 +1,15 @@
 window.addEventListener('offline', (e) => {
-    console.log("🔴 Rozłączono z internetem");
+    $('#networkstatus').removeClass('_vanish');
+    $('#networkstatus').text("🔴 Rozłączono z internetem");
+    setTimeout(() => {
+        $('#networkstatus').addClass('_vanish');
+      }, 5000)
 });
 
 window.addEventListener('online', (e) => {
-    console.log("🟢 Połączenie przywrócone");
+    $('#networkstatus').removeClass('_vanish');
+    $('#networkstatus').text("🟢 Połączenie przywrócone");
+    setTimeout(() => {
+        $('#networkstatus').addClass('_vanish');
+      }, 5000)
 });

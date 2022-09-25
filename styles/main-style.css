@@ -247,8 +247,19 @@ img{
   transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .top-tags .tags:hover {
-    transform: scale(1.2);
-    font-weight: 800;
+  transform: scale(1.2);
+  font-weight: 800;
+}
+#networkstatus {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.418);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 50%);
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+  font-family: 'Lato';
 }
 
 @media (max-width: 1020px), screen and (orientation: portrait) { 
