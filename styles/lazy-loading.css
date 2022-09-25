@@ -1,0 +1,122 @@
+.placeholder{
+    margin:5px;
+    padding:10px;
+    height: 320px;
+  }
+  
+  .placeholder div{background:#E8E8E8;}
+  
+  .placeholder .square{
+    width: -webkit-fill-available;
+    height:200px;
+    border-radius:8px;
+  }
+  
+  .placeholder .line{width: -webkit-fill-available; height: 24px; margin: 16px 20% 12px 0px; border-radius:12px;}
+  .placeholder span .line:nth-child(2){height: 16px; width: 160px;margin: 11px 20% 0px 60px;}
+  .placeholder span .line:nth-child(3){height: 16px; width: 130px;margin: 11px 20% 0px 60px;}
+  .placeholder .line:nth-child(4){height: 16px; width: 120px;margin: 11px 20% 0px 60px;}
+  
+  .placeholder .circle{
+    margin: 8px 8px 8px 0px;
+    width: 48px;
+    height: 48px;
+    border-radius:48px;
+    float: left;
+  }
+  
+  /* 
+    --------------
+    Pulse effect animation 
+    Activated by adding a '.pulse' class to the placeholder
+    --------------
+  */
+  
+  .placeholder.pulse div{
+    animation: pulse 1s infinite ease-in-out;
+    -webkit-animation:pulse 1s infinite ease-in-out;
+  }
+  
+  @keyframes pulse
+  {
+    0%{
+      background-color: rgba(165,165,165,.1);
+    }
+    50%{
+      background-color: rgba(165,165,165,.3);
+    }
+    100%{
+      background-color: rgba(165,165,165,.1);
+    }
+  }
+  
+  @-webkit-keyframes pulse
+  {
+    0%{
+      background-color: rgba(165,165,165,.1);
+    }
+    50%{
+      background-color: rgba(165,165,165,.3);
+    }
+    100%{
+      background-color: rgba(165,165,165,.1);
+    }
+  }
+  
+  /* 
+    --------------
+    Wave effect animation 
+    Activated by adding a '.wave' class to the placeholder
+    --------------
+  */
+  
+  .placeholder.wave div{
+      animation: wave 1s infinite linear forwards;
+      -webkit-animation:wave 1s infinite linear forwards;
+      background: #f6f7f8;
+      background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+      background-size: 800px 104px;
+  }
+  
+  @keyframes wave{
+      0%{
+          background-position: -468px 0
+      }
+      100%{
+          background-position: 468px 0
+      }
+  }
+  
+  @-webkit-keyframes wave{
+      0%{
+          background-position: -468px 0
+      }
+      100%{
+          background-position: 468px 0
+      }
+  }
+
+  ul li {
+    padding: 0.3rem;
+    margin: 1rem;
+    border-radius: 20px;
+    width: 400px;
+    background: rgba(18, 21, 30,.40);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.placeholders {
+  position: absolute;
+  top: 200px;
+}
