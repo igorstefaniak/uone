@@ -96,7 +96,7 @@
       }
   }
 
-  ul li {
+  .placeholders > ul li {
     padding: 0.3rem;
     margin: 1rem;
     border-radius: 20px;
@@ -104,7 +104,7 @@
     background: rgba(18, 21, 30,.40);
 }
 
-ul {
+.placeholders > ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
