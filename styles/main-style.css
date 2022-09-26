@@ -273,4 +273,5 @@ img{
     .user-menu ul li {font-size: 16px; margin: 10px;}
     .finder button {margin-right: 8px;}
     .left-navbar img {display: block;height: 40px;}
+    .placeholders > ul li {width: 335px!important;}
  }
