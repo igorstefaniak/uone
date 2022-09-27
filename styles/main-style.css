@@ -275,3 +275,11 @@ img{
     .left-navbar img {display: block;height: 40px;}
     .placeholders > ul li {width: 335px!important;}
  }
+::-webkit-scrollbar{
+  width: 12px;
+ }
+::-webkit-scrollbar-thumb{
+  background: #101319;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track{background: #191e27;}
