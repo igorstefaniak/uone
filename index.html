@@ -26,10 +26,21 @@
             </div>
             <div class="center-navbar">
                 <div class="finder">
-                    <input class="input" type="search" placeholder="Przeszukaj.." required>
-                    <button type="submit">
-                        <i id="search" class="bx bx-search"></i>
-                    </button>
+                    <form action="/search" method="GET" role="search"> 
+                        <input id="search-input" class="input" type="search" placeholder="Przeszukaj..." onkeyup="filterFunction()" autocomplete="off" required>
+                        <button type="submit">
+                            <i id="search" class="bx bx-search"></i>
+                        </button>
+                        <div id="dropdown">
+                            <ul id="list">
+                                <li><a href="./index.html" class="dropdown-list-el">Sulejów</a></li>
+                                <li><a class="dropdown-list-el">Podklasztorze</a></li>
+                                <li><a class="dropdown-list-el">Piotrków Trybunalski</a></li>
+                                <li><a class="dropdown-list-el">Bujny</a></li>
+                                <li><a class="dropdown-list-el">Łęczno</a></li>
+                            </ul>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -201,5 +212,6 @@
         <script src="./scripts/tags.js"></script>
         <script src="./scripts/welcome.js"></script>
         <script src="./scripts/status.js"></script>
+        <script src="./scripts/search.js"></script>
     </body>
 </html>
