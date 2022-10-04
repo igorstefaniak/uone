@@ -13,26 +13,6 @@ $('#search-input').focusout(
   }
 )
 
-/* $('#search-input').focus(
-    function(){
-      $('#dropdown').mouseover(function(){
-        $('#dropdown').removeClass('_vanish');
-      }
-    )
-      $('#dropdown').removeClass('_vanish');
-        }
-
-)
-  $('#search-input').focusout (function(){
-    $('#dropdown').mouseleave(
-    function(){
-      $('#dropdown').addClass('_vanish');
-    }
-    )
-  }
-)
- */
-
 function filterFunction() {
     var input, filter, a, i;
     input = document.getElementById("search-input");
