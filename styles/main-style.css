@@ -1,6 +1,12 @@
 
 /* Igor Stefaniak 2022 */
 
+:root {
+  --n-background: #0c0f11;
+  --n-lighter-background: #1a2025;
+  --n-element: #2d353e;
+}
+
 * {
   font-family: 'Comfortaa', sans-serif;
   box-sizing: border-box;
@@ -9,7 +15,7 @@
 }
 
 body {
-  background-image: url("../images/background-pattern.png"), linear-gradient(96deg,#0e1118, #262e3f);
+  background: url("../images/background-pattern.png"), var(--n-background);
   height: 100%;
 }
 
@@ -34,7 +40,7 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: rgba(0, 0, 0, 0.418);
+  background: var(--n-lighter-background);
   border-radius: 30px 30px 30px 30px;
   padding: 10px 0px;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,.5);
@@ -70,7 +76,7 @@ img{
   border: none;
   border-radius: 24px;
   font-family: 'Lato', sans-serif;
-  background: #1f2531;
+  background: var(--n-element);
   color:white;
   width: calc(900% - 70px);
   text-indent: 10px;
@@ -138,23 +144,26 @@ img{
   top: 80px;
   position: absolute;
   width: calc(100% - 45%);
-  background: #1f2531;
+  background: var(--n-lighter-background);
   border-radius: 30px 30px 30px 30px;
   padding: 10px 0px;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 50%);
   z-index: 100;
+  transition: all 0.5s ease-in-out;
 }
 #dropdown ul li{
   list-style-type: none;
   margin: 10px;
 }
+#dropdown ul li::before {
+  content: "🔎 ";
+}
 #dropdown ul{
   margin-top: 0;
   margin-bottom: 0;
 }
-.input[type=search]:focus:not + #dropdown{
-  visibility: hidden;
-  opacity: 0;
+.dropdown-list-el:hover{
+  font-weight: bolder;
 }
 /* --- */
 .items-navbar{
@@ -241,7 +250,7 @@ img{
   position:fixed;
   border-radius: 10px;
   width: 140px;
-  background: rgba(18, 21, 30,.40);
+  background: var(--n-lighter-background);
   z-index: 9090999;
   top: 95px;
   transition: 0.45s ease-out;
@@ -265,7 +274,8 @@ img{
   visibility: hidden;
   opacity: 0;
 }
-.user-menu ul {list-style-type: none;
+.user-menu ul {
+  list-style-type: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -273,33 +283,41 @@ img{
 }
 /* --- */
 .top-tags {
+  height: 60px;
   display: flex;
   position: fixed;
   top: 95px;
-  height: 60px;
   right: 150px;
   left: 150px;
   align-items: center;
   justify-content: center;
   transition: all .20s cubic-bezier(0.4, 0, 1, 1);
+  visibility: hidden;
+}
+.top-tags > * {
+  visibility: visible;
+  transition: opacity 200ms;
 }
 .top-tags > a {
   display:table;
-  background: rgba(0, 0, 0, 0.418);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 30px 30px 30px 30px;
   padding: 10px 25px 10px 25px;
   margin: 5px 10px 5px 10px;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,.5);
-  font-size: 14px;
+  font-size: 15px;
   transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .top-tags > a:hover {
   transform: scale(1.2);
   font-weight: 800;
 }
+.top-tags:hover > :not(:hover) {
+  opacity: 0.5;
+}
 #networkstatus {
   position: fixed;
-  background: rgba(0, 0, 0, 0.418);
+  background: var(--n-lighter-background);
   border-radius: 10px;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 50%);
   right: 10px;
@@ -314,7 +332,7 @@ img{
     .top-navbar{height: 48px; left:10px; right:10px;}
     .center-navbar{ width: -webkit-fill-available;}
     .finder input[type=text] {margin: 8px; font-size: 12px; width: calc(900% - 20px);}
-    .top-tags div{font-size: 12px; height: 30px; padding: 10px 15px 10px 15px;}
+    .top-tags a{font-size: 12px; height: 30px; padding: 10px 15px 10px 15px;}
     .top-tags{flex-wrap: wrap; left: 25px; right: 25px;}
     .user-menu{right: 10px; width: 180px;}
     .user-menu ul li {font-size: 16px; margin: 10px;}
