@@ -37,6 +37,8 @@ function filterFunction() {
     }
 }
 
+function fast_search() {
+
 var pos = $('#search-input');
 var left = pos.offset().left;
 var width = pos.width() + 48 + 'px';
@@ -47,14 +49,9 @@ $('#dropdown').css({
   width:width
 });
 
+}
+
+
 window.addEventListener('resize', function(event) {
-  var pos = $('#search-input');
-  var left = pos.offset().left;
-  var width = pos.width() + 48 +'px';
-  
-  $('#dropdown').css({
-    position:'fixed',
-    left:left,
-    width:width
-  });
+  fast_search();
 }, true);
