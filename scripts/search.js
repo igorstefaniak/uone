@@ -36,3 +36,25 @@ function filterFunction() {
       }
     }
 }
+
+var pos = $('#search-input');
+var left = pos.offset().left;
+var width = pos.width() + 48 + 'px';
+
+$('#dropdown').css({
+  position:'fixed',
+  left:left,
+  width:width
+});
+
+window.addEventListener('resize', function(event) {
+  var pos = $('#search-input');
+  var left = pos.offset().left;
+  var width = pos.width() + 48 +'px';
+  
+  $('#dropdown').css({
+    position:'fixed',
+    left:left,
+    width:width
+  });
+}, true);
