@@ -15,6 +15,7 @@ $('#search-input').focusout(
 
 function filterFunction() {
     var input, filter, a, i;
+    var lista = [];
     input = document.getElementById("search-input");
     filter = input.value.toUpperCase();
     alert = document.getElementById("alert")
@@ -26,15 +27,27 @@ function filterFunction() {
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         a[i].style.display = "";
         alert.style.display = "none";
-      } 
+        lista[txtValue] = i;
+        a[i].style.borderTop = "1px solid #2d353e";
+      }
       else {
         a[i].style.display = "none";
         n++;
           if(n == a.length){
             alert.style.display = "";
+            alert.style.borderTop = "0";
           }
       }
     }
+    console.log(lista);
+    
+    var min = Infinity;
+      for(var nazwaKlucza in lista) {
+        if(lista[nazwaKlucza] < min) {
+        min = lista[nazwaKlucza];
+        a[min].style.borderTop = "0";
+    }
+}
 }
 
 function fast_search() {
