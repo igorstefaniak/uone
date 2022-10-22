@@ -47,7 +47,7 @@ function filterFunction() {
         min = lista[nazwaKlucza];
         a[min].style.borderTop = "0";
     }
-}
+  }
 }
 
 function fast_search() {
