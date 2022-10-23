@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="./styles/main-style.css">
         <link rel="stylesheet" href="./styles/lazy-loading.css">
     </head>
-    <body onload="fast_search()">
+    <body onload="fast_search()" class="_dark">
         <div class="top-navbar">
             <div class="left-navbar">
                 <a href="/" target="_self"><img src="./images/icon-play.svg" alt="Logo serwisu"></a>
@@ -74,14 +74,13 @@
                         <li><a href="./logout.php"><i class="bx bx-wrench"></i><div>Ustawienia</div></a></li>
                         <li><a href="./logout.php"><i class="bx bx-run"></i><div>Wyloguj się</div></a></li>
                         <li><a href="./logout.php"><i class="bx bx-code"></i><div>Informacje</div></a></li>
-                        <li><div class="toggle">
-                            <input class="toggle-input" type="checkbox" checked/>
-                                <div class="toggle-bg"></div>
-                                    <div class="toggle-switch">
-                                    <div class="toggle-switch-figure"></div>
-                                    <div class="toggle-switch-figureAlt"></div>
-                                </div>  
-                            </div>
+                        <li><div class="switch">
+                            <input type="checkbox" class="switch__input" id="switchld">
+                            <label class="switch__label" for="switchld">
+                                <span class="switch__indicator"></span>
+                                <span class="switch__decoration"></span>
+                            </label>
+                        </div>
                         </li>
                     </ul>
                 </div>
@@ -93,7 +92,7 @@
             <a href="javascript:bookmarks()" style="background: rgba(8, 221, 255, .22)"><div style="color: #3CCFFE;">#css</div></a>
             <a href="javascript:bookmarks()" style="background: rgba(211, 179, 44, .22)"><div style="color: #FFD835;">#javascript</div></a>
             <a href="javascript:bookmarks()" style="background: rgba(142, 75, 235, .22)"><div style="color: #B151FF;">#grafika</div></a>
-            <a href="javascript:bookmarks()" style="background: rgba(44, 211, 94, .22)"><div style="color: #35ff46;">#gry</div></a>
+            <a href="javascript:bookmarks()" style="background: rgb(19, 58, 34)"><div style="color: #35ff46;">#gry</div></a>
             <a href="javascript:bookmarks()" style="background: rgba(191, 19, 37, .22)"><div style="color: #FF1931;">#blog</div></a>
         </div>
          <div class="placeholders" id="placeholders">
@@ -241,5 +240,6 @@
         <script src="./scripts/welcome.js"></script>
         <script src="./scripts/status.js"></script>
         <script src="./scripts/search.js"></script>
+        <script src="./scripts/switch.js"></script>
     </body>
 </html>

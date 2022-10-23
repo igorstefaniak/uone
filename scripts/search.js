@@ -28,7 +28,7 @@ function filterFunction() {
         a[i].style.display = "";
         alert.style.display = "none";
         lista[txtValue] = i;
-        a[i].style.borderTop = "1px solid #2d353e";
+        a[i].style.borderTop = "1px solid var(--component)";
       }
       else {
         a[i].style.display = "none";
